@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal Box</title>
+    <style>
+    .modal-cover{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        background-color: rgba(0,0,0,0.4);
+        width: 100%;
+        top: 0;
+        overflow: auto;
+
+        }
+        .close{
+            float: right;
+    color: white;
+    font-size: 50px;
+    right: 20px;
+    position: absolute;
+    font-weight: bold;
+        }
+
+        .modal-content{
+            margin: 15% auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <button class="modal-btn" id="mybtn">Open</button>
+
+    <div class="modal-cover" id="mymodal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <p>some modal will be opened</p>
+        </div>
+    </div>
+
+    <script>
+    var btn = document.getElementById('mybtn');
+    var modal = document.getElementById('mymodal');
+    var close = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function(){
+        modal.style.display = "block";
+
+    }
+    close.onclick = function(){
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(e){
+        if(e.target == modal){
+            modal.style.display = "none";
+        }
+       
+    }
+    </script>
+</body>
+</html>
