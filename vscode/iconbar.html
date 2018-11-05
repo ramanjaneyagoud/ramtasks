@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="icon-bar">
+        <a class="active" href="#"><i class="fa fa-home"></i></a>
+        <a href="#"><i class="fa fa-search"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+        <a href="#"><i class="fa fa-globe"></i></a>
+        <a href="#"><i class="fa fa-trash"></i></a>
+    </div>
+    <!-- <style>
+        /* Vertical Menu Icon bar*/
+        .icon-bar {
+            width: 90px;
+            /* Set a specific width */
+            background-color: #555;
+            /* Dark-grey background */
+        }
+
+        .icon-bar a {
+            display: block;
+            /* Make the links appear below each other instead of side-by-side */
+            text-align: center;
+            /* Center-align text */
+            padding: 16px;
+            /* Add some padding */
+            transition: all 0.3s ease;
+            /* Add transition for hover effects */
+            color: white;
+            /* White text color */
+            font-size: 36px;
+            /* Increased font-size */
+        }
+
+        .icon-bar a:hover {
+            background-color: #000;
+            /* Add a hover color */
+        }
+
+        .active {
+            background-color: #4CAF50;
+            /* Add an active/current color */
+        }
+    </style> -->
+    <style>
+        /* Horizontal Menu Icon bar*/
+        .icon-bar {
+            width: 100%;
+            /* Set a specific width */
+            background-color: #555;
+            /* Dark-grey background */
+            overflow: auto;
+        }
+
+        .icon-bar a {
+            float: left;
+            /* display: inline-block; */
+            text-align: center;
+            /* Center-align text */
+            width: 15%;
+            padding: 16px;
+            /* Add some padding */
+            transition: all 0.3s ease;
+            /* Add transition for hover effects */
+            color: white;
+            /* White text color */
+            font-size: 36px;
+            /* Increased font-size */
+        }
+
+        .icon-bar a:hover {
+            background-color: #000;
+            /* Add a hover color */
+        }
+
+        .active {
+            background-color: #4CAF50;
+            /* Add an active/current color */
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").click(function () {
+                $("a").removeClass("active");
+                $(this).addClass("active");
+
+            });
+        });
+    </script>
+</body>
+
+</html>
